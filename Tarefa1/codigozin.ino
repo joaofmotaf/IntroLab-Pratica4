@@ -3,7 +3,12 @@ void setup() {
 }
 
 void loop() {
-  double termo = 5.0 * analogRead(A0) / 1023;
-  double R = 5e4/(5 - termo) - 1e4;
+  double a = 5.0 * analogRead(A0) / 1023;
+
+  double x = (5-a)/5;
+  double R = (x * 1e4)/(1-x);
+ 
   Serial.println(R);
+  Serial.println();
+  delay(1000);
 }

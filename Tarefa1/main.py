@@ -2,6 +2,8 @@ import numpy as np
 
 # T_kelvin = 1 / (A + B * np.log(R) + C * (np.log(R) ** 3))
 
+# Água a °C: 1.5
+
 logs_R = np.log(np.array([float(i) for i in input().split()]))  # log(R)
 A = np.array([
     [1, logs_R[0], logs_R[0] ** 3],
